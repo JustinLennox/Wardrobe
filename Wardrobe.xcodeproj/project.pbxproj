@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D03CDA3E1AD716D600F25929 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03CDA3D1AD716D600F25929 /* ProfileViewController.m */; };
 		D048FC0F1AD6EF69006D7FA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D048FC0E1AD6EF69006D7FA2 /* main.m */; };
 		D048FC121AD6EF69006D7FA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D048FC111AD6EF69006D7FA2 /* AppDelegate.m */; };
 		D048FC151AD6EF69006D7FA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D048FC141AD6EF69006D7FA2 /* ViewController.m */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D03CDA3C1AD716D600F25929 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		D03CDA3D1AD716D600F25929 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		D048FC091AD6EF69006D7FA2 /* Wardrobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wardrobe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D048FC0D1AD6EF69006D7FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D048FC0E1AD6EF69006D7FA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				D048FC5A1AD702BA006D7FA2 /* HomeViewController.m */,
 				D048FC131AD6EF69006D7FA2 /* ViewController.h */,
 				D048FC141AD6EF69006D7FA2 /* ViewController.m */,
+				D03CDA3C1AD716D600F25929 /* ProfileViewController.h */,
+				D03CDA3D1AD716D600F25929 /* ProfileViewController.m */,
 				D048FC621AD70946006D7FA2 /* customCell.h */,
 				D048FC631AD70946006D7FA2 /* customCell.m */,
 				D048FC641AD70946006D7FA2 /* customCell.xib */,
@@ -337,6 +342,7 @@
 				D048FC151AD6EF69006D7FA2 /* ViewController.m in Sources */,
 				D048FC121AD6EF69006D7FA2 /* AppDelegate.m in Sources */,
 				D048FC0F1AD6EF69006D7FA2 /* main.m in Sources */,
+				D03CDA3E1AD716D600F25929 /* ProfileViewController.m in Sources */,
 				D048FC5B1AD702BA006D7FA2 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +544,7 @@
 				D048FC2E1AD6EF69006D7FA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D048FC2F1AD6EF69006D7FA2 /* Build configuration list for PBXNativeTarget "WardrobeTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +553,7 @@
 				D048FC311AD6EF69006D7FA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

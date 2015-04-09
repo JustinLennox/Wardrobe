@@ -7,6 +7,7 @@
 //
 
 #import "customCell.h"
+#import "HomeViewController.h"
 
 @implementation customCell
 @synthesize heartButton;
@@ -29,8 +30,6 @@
     return self;
 }
 
-
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -38,15 +37,39 @@
 }
 
 - (IBAction)heartButtonPressed:(id)sender {
+    
 }
 
 - (IBAction)commentButtonPressed:(id)sender {
 }
 
 - (IBAction)usernameButtonPressed:(id)sender {
-    NSLog(@"Pressed!");
+    NSLog(@"yay...");
+    
+    id<customCellDelegate> strongDelegate = self.delegate;
+    
+    // Our delegate method is optional, so we should
+    // check that the delegate implements it
+    if ([strongDelegate respondsToSelector:@selector(usernameTouched)]){
+        [strongDelegate usernameTouched];
+    }
+
+
+}
+
+-(void)usernameTouched{
+    NSLog(@"double yayy..");
+    
 }
 
 - (IBAction)profileImageButtonPressed:(id)sender {
+    
+    id<customCellDelegate> strongDelegate = self.delegate;
+    
+    // Our delegate method is optional, so we should
+    // check that the delegate implements it
+    if ([strongDelegate respondsToSelector:@selector(usernameTouched)]){
+        [strongDelegate usernameTouched];
+    }
 }
 @end

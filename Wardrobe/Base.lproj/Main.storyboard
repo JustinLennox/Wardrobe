@@ -38,11 +38,30 @@
                     <navigationItem key="navigationItem" id="V3z-lv-WOT"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="splashSegue" id="Ije-OI-Npl"/>
+                        <segue destination="ENz-OB-wX6" kind="show" identifier="profileSegue" id="HoP-KR-QYb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjo-8e-RCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1920" y="940"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="7IG-nb-pFy">
+            <objects>
+                <viewController id="ENz-OB-wX6" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CYi-lv-k2C"/>
+                        <viewControllerLayoutGuide type="bottom" id="B6k-dK-ZG8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e7N-al-TuI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4y-7m-eW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2690" y="940"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8qW-L1-GcT">

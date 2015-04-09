@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "customCell.h"
 
-@interface HomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface HomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, customCellDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
+-(void)usernameTouched;
 
 @end

@@ -8,7 +8,6 @@
 
 #import "HomeViewController.h"
 #import <Parse/Parse.h>
-#import "customCell.h"
 
 @interface HomeViewController ()
 
@@ -69,12 +68,16 @@
     if(cell == nil){
         cell = [[customCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        cell.delegate = self;
 
     }
     
     return cell;
 }
 
+-(void)usernameTouched{
+    [self performSegueWithIdentifier:@"profileSegue" sender:self];
+}
 
 /*
 #pragma mark - Navigation
