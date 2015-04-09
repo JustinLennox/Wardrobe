@@ -75,8 +75,14 @@
     return cell;
 }
 
+#pragma mark- Custom Cell Delegate
+
 -(void)usernameTouched{
     [self performSegueWithIdentifier:@"profileSegue" sender:self];
+}
+
+-(void)outfitLiked{
+    
 }
 
 /*

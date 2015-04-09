@@ -17,21 +17,17 @@
 @property (nonatomic, weak) id<customCellDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UIImageView *squareBackgroundImageView;
-@property (strong, nonatomic) IBOutlet UIButton *profileImageButton;
 
-@property (strong, nonatomic) IBOutlet UIButton *usernameButton;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
-
 @property (strong, nonatomic) IBOutlet UIButton *heartButton;
-- (IBAction)heartButtonPressed:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *commentButton;
+@property (strong, nonatomic) IBOutlet UIButton *profileImageButton;
+@property (strong, nonatomic) IBOutlet UIButton *usernameButton;
+@property (strong, nonatomic) IBOutlet UIImageView *outfitImageView;
+
 - (IBAction)commentButtonPressed:(id)sender;
-
-
-
-
+- (IBAction)heartButtonPressed:(id)sender;
 - (IBAction)profileImageButtonPressed:(id)sender;
-
 - (IBAction)usernameButtonPressed:(id)sender;
 
 @end
@@ -39,6 +35,7 @@
 @protocol customCellDelegate <NSObject>
 
 - (void)usernameTouched;
+-(void)outfitLiked;
 
 
 @end

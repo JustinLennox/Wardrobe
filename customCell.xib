@@ -82,6 +82,7 @@
             <connections>
                 <outlet property="commentButton" destination="EG9-H8-u2r" id="DU6-oq-lW8"/>
                 <outlet property="heartButton" destination="GeI-35-epL" id="xa5-L7-Xex"/>
+                <outlet property="outfitImageView" destination="kzv-WO-iPs" id="300-OI-8b3"/>
                 <outlet property="profileImageButton" destination="b7t-gw-p9e" id="3NX-Im-NFJ"/>
                 <outlet property="squareBackgroundImageView" destination="DgK-Z6-7s6" id="L7Z-5h-lSx"/>
                 <outlet property="timeLabel" destination="Hnj-VL-FuX" id="Vvl-Wk-dpY"/>

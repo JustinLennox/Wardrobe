@@ -16,6 +16,7 @@
 @synthesize profileImageButton;
 @synthesize squareBackgroundImageView;
 @synthesize timeLabel;
+@synthesize outfitImageView;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -26,8 +27,28 @@
     if(self){
         NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"customCell" owner:self options:nil];
         self = [nibArray objectAtIndex:0];
+        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(outfitTapped:)];
+        tapRecognizer.numberOfTapsRequired = 2;
+        [self.outfitImageView addGestureRecognizer:tapRecognizer];
+        self.outfitImageView.userInteractionEnabled = YES;
     }
     return self;
+}
+
+-(void)outfitTapped : (UITapGestureRecognizer *)sender{
+    
+    if(sender.state == UIGestureRecognizerStateEnded){
+        [self outfitLiked];
+    }
+    
+    id<customCellDelegate> strongDelegate = self.delegate;
+    
+    // Our delegate method is optional, so we should
+    // check that the delegate implements it
+    if ([strongDelegate respondsToSelector:@selector(outfitLiked)]){
+        [strongDelegate outfitLiked];
+    }
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -44,7 +65,6 @@
 }
 
 - (IBAction)usernameButtonPressed:(id)sender {
-    NSLog(@"yay...");
     
     id<customCellDelegate> strongDelegate = self.delegate;
     
@@ -55,11 +75,6 @@
     }
 
 
-}
-
--(void)usernameTouched{
-    NSLog(@"double yayy..");
-    
 }
 
 - (IBAction)profileImageButtonPressed:(id)sender {
@@ -72,4 +87,32 @@
         [strongDelegate usernameTouched];
     }
 }
+
+#pragma mark- Custom Cell Delegate
+-(void)usernameTouched{
+    
+}
+
+-(void)outfitLiked{
+    
+    UIImageView *heartFade = [[UIImageView alloc] initWithFrame:CGRectMake(self.outfitImageView.center.x -25, self.outfitImageView.center.y - 25, 50, 50)];
+    [heartFade setImage:[UIImage imageNamed:@"heart.png"]];
+    [self addSubview:heartFade];
+    
+    
+    [UIView animateWithDuration:0.3f delay:0.0f options:
+     UIViewAnimationOptionCurveEaseIn animations:^{
+         heartFade.alpha = 1.0f;
+         
+     } completion:^ (BOOL completed) {
+         [UIView animateWithDuration:0.3f delay:0.5f options:
+          UIViewAnimationOptionCurveEaseIn animations:^{
+              heartFade.alpha = 0.0f;
+          } completion:nil];
+     }];
+    
+    
+    
+}
+
 @end
